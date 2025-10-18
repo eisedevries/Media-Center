@@ -105,6 +105,27 @@ You can auto start the backend and frontend using the provided `start.py` file i
     db_cache.json        created at runtime
     last_sync.json       created at runtime
 
+
+# MPV config files and scripts reused
+Below files were reused (and modified) for MPV:
+
+- https://github.com/thisisshihan/mpv-player-config-snad  
+`osc.conf`  
+`mpv.conf`  
+
+
+- https://github.com/Samillion/ModernZ/tree/main/extras/pause-indicator-lite  
+`pause-indicator.lua`  
+
+
+- https://github.com/mustaqimM/mpv-scripts/time.lua  
+`time.lua`  
+
+- Eisa AlAwadhi
+`UndoRedo.lua`
+
+
+
 # Disclaimer and acceptable use
 
 This project provides only the source code for a locally hosted media browser. It does not host, stream, or distribute any movies or other copyrighted material.
