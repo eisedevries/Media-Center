@@ -1,0 +1,172 @@
+
+/* WARNING Set max 25% padding on the sides!! */
+
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Background image style */
+.background-image {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5) blur(64px);
+  transition: opacity 3s ease; /* Extended transition for smoother fade */
+  z-index: 1; /* Base z-index for all background images */
+}
+
+/* Background transition states */
+.background-image.opacity-0 {
+  opacity: 0;
+  pointer-events: none; /* Prevent interaction with hidden backgrounds */
+}
+
+.background-image.opacity-100 {
+  opacity: 1;
+  z-index: 2; /* Higher z-index for the active background */
+}
+
+/* Modify the animation to be more contained */
+@keyframes pan {
+  0%  { transform: scale(1) translate(0%, 0%); }
+  10% { transform: scale(1.5) translate(10%, -5%); }
+  20% { transform: scale(1) translate(-7%, 5%); }
+  30% { transform: scale(1.5) translate(10%, 6%); }
+  40% { transform: scale(1) translate(-6%, -7%); }
+  50% { transform: scale(1.5) translate(9%, 8%); }
+  60% { transform: scale(1) translate(-8%, -6%); }
+  70% { transform: scale(1.5) translate(10%, -8%); }
+  80% { transform: scale(1) translate(-5%, 7%); }
+  90% { transform: scale(1.5) translate(10%, -3%); }
+  100%{ transform: scale(1) translate(0%, 0%); }
+}
+  .animate-pan {
+    animation: pan 90s ease-in-out infinite;
+  }
+  
+  /* Modal Overlay Transition (fade only) */
+  .modal-overlay-enter-from,
+  .modal-overlay-leave-to {
+    opacity: 0;
+  }
+  .modal-overlay-enter-active,
+  .modal-overlay-leave-active {
+    transition: opacity 0.3s ease;
+  }
+  .modal-overlay-enter-to,
+  .modal-overlay-leave-from {
+    opacity: 1;
+  }
+  
+  /* Modal Content Transition (fade + scale) */
+  .modal-content-enter-from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  .modal-content-enter-to {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .modal-content-leave-from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .modal-content-leave-to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  .modal-content-enter-active,
+  .modal-content-leave-active {
+    transition: all 0.3s ease;
+  }
+  
+  /* Video Popup Transition (fade only) */
+  .video-enter-from,
+  .video-leave-to {
+    opacity: 0;
+  }
+  .video-enter-active {
+    transition: opacity 0.3s ease-in;
+  }
+  .video-leave-active {
+    transition: opacity 0.3s ease;
+  }
+  .video-enter-to,
+  .video-leave-from {
+    opacity: 1;
+  }
+  
+  /* Play Icon Styles */
+  .play-icon {
+    transform: translate(-50%, -50%) scale(2);
+    filter: drop-shadow(0px 0px 5px #000000a8)
+            drop-shadow(0px 0px 10px #0000002d)
+            drop-shadow(0px 0px 30px #00000054);
+  }
+  .play-icon,
+  .play-icon-no-poster {
+    transition: transform 0.3s ease;
+    color: #ffffffab;
+  }
+  #information-container .relative:hover .play-icon {
+    transform: translate(-50%, -50%) scale(2.7);
+    transition: transform 0.3s ease;
+  }
+  .play-icon-no-poster:hover {
+    transform: scale(1.3);
+    transition: transform 0.3s ease;
+    color: #ffffffab;
+  }
+  #information-container .relative:hover img {
+    filter: brightness(0.65);
+    transition: filter 0.3s ease;
+  }
+  
+  /* Video Popup */
+  .video-popup {
+    z-index: 9998;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html {
+    scrollbar-width: none;
+
+  
+    .normal-button {
+      background-color: #f0d44a;
+      color: #0B0C14; /* Setting the text color as requested */
+    }
+    
+    .normal-button:hover {
+      background-color: #F3CE13;
+      color: #0B0C14; /* Maintain text color on hover */
+    }
+
+
+    .fade-enter-active,
+    .fade-leave-active {
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    
+    .fade-enter-from,
+    .fade-leave-to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+}
