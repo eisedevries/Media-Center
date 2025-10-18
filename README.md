@@ -8,8 +8,9 @@ This repository contains a media browser built with a FastAPI backend and a Nuxt
 
 The project has been tested on Python 3.13 and Node 24 (for Nuxt).
 
-## Screenshot
-![Screenshot](assets/screenshot.png)
+## Screenshots
+![Screenshot](assets/screenshot1.png)
+![Screenshot](assets/screenshot2.png)
 
 ## Features
 
