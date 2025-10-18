@@ -1,0 +1,1 @@
+This folder contains scripts that have been removed (because they are deprecated)

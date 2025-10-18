@@ -1,0 +1,60 @@
+# Server database
+db_cache.json
+database.json
+last_sync.json
+
+# MPV Config stuff
+backend/portable_config/cache/*
+backend/portable_config/fonts/*
+backend/portable_config/watch_later/*
+backend/posters/*
+!backend/portable_config/cache/.gitkeep
+!backend/portable_config/fonts/.gitkeep
+!backend/portable_config/watch_later/.gitkeep
+!backend/posters/.gitkeep
+
+# Python stuff
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+build/
+dist/
+*.egg-info/
+
+# IDE settings
+.idea/
+.vscode/
+.fleet
+
+# Fonts and executables
+*.ttf
+*.exe
+
+# Notes
+TODO.md
+
+# Nuxt stuff
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+
+# Node dependencies
+node_modules
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+
+# Local env files
+.env
+.env.*
+!.env.example

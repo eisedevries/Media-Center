@@ -1,0 +1,15 @@
+pystray
+pillow
+guessit
+python-dotenv
+fastapi
+uvicorn
+python-dotenv
+requests
+websockets
+aiofiles
+requests
+websockets
+fastapi
+pystray
+PyQt5
