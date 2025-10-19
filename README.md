@@ -1,10 +1,10 @@
 # Media Center
 
-This project is a clean, locally hosted alternative to applications such as Plex and Jellyfin. It lets you stream content directly from your own server through WebDAV.
+This repository contains a locally hosted alternative to applications such as Plex and Jellyfin. It lets you stream content directly from your own server through WebDAV.
+
+It provides a media browser built with a FastAPI backend and a Nuxt frontend. The backend automatically crawls video files from an ownCloud server (code can be adopted for other servers), organizes them in a clean interface and allows playback through the powerful MPV player.
 
 The project was originally developed for Windows and later adapted for Linux (tested on Ubuntu). Linux compatibility is verified, but the latest Windows configuration has not yet been revalidated.
-
-This repository contains a media browser built with a FastAPI backend and a Nuxt frontend. It can automatically crawl video files from an ownCloud server (code can be adopted for other servers), organize them in a clean interface and leverage the playback power of MPV.
 
 The project has been tested on Python 3.13 and Node 24 (for Nuxt).
 
