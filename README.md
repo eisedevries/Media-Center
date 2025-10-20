@@ -2,7 +2,7 @@
 
 This repository contains a locally hosted alternative to applications such as Plex and Jellyfin. It lets you stream content directly from your own server through WebDAV.
 
-It provides a media browser built with a FastAPI backend and a Nuxt frontend. The backend automatically crawls video files from an ownCloud server (code can be adopted for other servers), organizes them in a clean interface and allows playback through the powerful MPV player.
+It provides a media browser built with a FastAPI backend and a Nuxt frontend. The backend automatically crawls video files from an WebDAV ownCloud server (code can be adopted for other servers and protocols), organizes them in a clean interface and allows playback through the powerful MPV player.
 
 The project was originally developed for Windows and later adapted for Linux (tested on Ubuntu). Linux compatibility is verified, but the latest Windows configuration has not yet been revalidated.
 
@@ -25,7 +25,7 @@ The project has been tested on Python 3.13 and Node 24 (for Nuxt).
 1. Python 3.13  
 2. Node 18 or newer  
 3. MPV installed for Linux or for Windows placed as backend/mpv.exe. Note that playback through the browser is not supported
-4. A WebDAV server that hosts your media library (this project was tested on a ownCloud server)  
+4. A WebDAV server that hosts your media library
 5. An OMDb API key
 
 
