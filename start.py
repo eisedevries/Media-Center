@@ -81,18 +81,16 @@ def start_frontend():
 
     frontend_log = open(os.path.join(script_dir, "frontend_log.txt"), "w") if LOGGING else subprocess.DEVNULL
 
-    if os.name == "nt":
-        frontend_cmd = "npm run start"
-    else:
-        frontend_cmd = ["npm", "run", "start"]
+    env = os.environ.copy()
+    env["PORT"] = "50004"
 
     print("Starting frontend...")
     frontend_proc = subprocess.Popen(
-        frontend_cmd,
+        ["npm", "run", "start"],
         cwd=frontend_path,
-        shell=True if os.name == "nt" else False,
         stdout=frontend_log,
-        stderr=frontend_log
+        stderr=frontend_log,
+        env=env
     )
 
     if wait_for_service("http://localhost:50004/"):
@@ -100,6 +98,7 @@ def start_frontend():
     else:
         print("Frontend failed to start.")
         sys.exit(1)
+
 
 
 def stop_servers():

@@ -18,7 +18,7 @@ omdb_api_key = os.getenv('omdb_api_key')
 posters_dir = os.path.join(os.path.dirname(__file__), "posters")
 if not os.path.exists(posters_dir):
     os.makedirs(posters_dir)
-
+    
 
 # Create the posters directory if it doesn't exist.
 if not os.path.exists(posters_dir):
